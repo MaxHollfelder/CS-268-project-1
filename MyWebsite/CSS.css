@@ -1,5 +1,5 @@
 body {
-  background-color: #034301;
+  background-image: linear-gradient(grey, #034301);
   color: white;
   background-size: 100% 100%;
   margin: 0;
@@ -55,6 +55,39 @@ body {
   width: 90%;
   height: 50%;
   padding: 20px;
+}
+#container{
+  background-color: black;
+  width: 200px;
+  height: 300px;
+  margin: 2px;
+  border-radius: 20px;
+  position: relative;
+  border-color: black;
+  float:left;
+}
+#picture{
+  width: 100%;
+  height: 40%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+#header {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  top: 0;
+  border: 1px solid green;
+}
+#footer {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  text-align: center;
+}
+#divBody{
+  text-align: center;
 }
 @media screen and (max-width: 200px) {
   .row, .navbar {
