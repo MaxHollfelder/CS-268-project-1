@@ -1,0 +1,54 @@
+.poll-container {
+  display: grid;
+  grid-gap: 10px;
+  padding: 10px;
+  grid-template-areas:
+  "a a b b"
+  "a a b b"
+  "c c d d"
+  "c c d d";
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  grid-area: a;
+  align-self: center;
+}
+.right {
+  grid-area: b;
+  align-self: center;
+}
+.bottom-left {
+  grid-area: c;
+  align-self: center;
+}
+.bottom-right {
+  grid-area: d;
+  align-self: center;
+}
+.bottomB{
+  position: absolute;
+  align: center;
+  padding:3px;
+  bottom:0;
+}
+.pollBox{
+  position: relative;
+  background-image: linear-gradient(grey, #034301);
+  padding:2px;
+  width:300px;
+  font-family:Arial;
+  color:white;
+  height:500px;
+}
+@media (max-width: 900px) {
+  .poll-container {
+    grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "c";
+    justify-content: center;
+    align-items: center;
+   }
+}

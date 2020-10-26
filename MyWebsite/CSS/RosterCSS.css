@@ -5,8 +5,9 @@
   display: grid;
   grid-gap: 1rem;
 }
+
 @media (min-width: 400px) {
-  .grid-containerR { grid-template-columns: repeat(2, 1fr); }
+  .grid-containerR { grid-template-columns: repeat(1, 1fr); }
 }
 @media (min-width: 600px) {
   .grid-containerR { grid-template-columns: repeat(3, 1fr); }

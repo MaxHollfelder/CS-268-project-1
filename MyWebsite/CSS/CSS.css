@@ -44,29 +44,30 @@ table.center{
   }
 }
 .image{
-  width: 90%;
-  height: 50%;
-  padding: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
-.item1 {
+.head {
   grid-area: header;
   padding: 20px;
   text-align: center;
   font-family:WildWest;
   color: white;
 }
-.item2 {
+.menu {
   grid-area: menu;
   text-align: left;
 }
-.item3 {
+.main {
   grid-area: main;
 }
-.item4 {
+.right {
   grid-area: right;
   text-align: left;
 }
-.item5 {
+.foot {
   grid-area: footer;
   text-align: center;
 }
