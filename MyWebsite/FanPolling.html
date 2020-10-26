@@ -1,37 +1,27 @@
-<!DOCTYPE html>
 <html>
-	<header>
-		<title>Max's Bucks</title>
-		<link rel="stylesheet" href="CSS.css">
-		<div class="header">
-			<h1>Millwaukee Bucks Basketball Fan Page</h1>
-		</div>
-		<div class="navbar">
-			<a href="HomePage.html">Home</a>
-			<a href="Roster.html">Roster</a>
-			<a href="Coaches.html">Coaches</a>
-			<a href="FrontOffice.html">Front Office</a>
-			<a href="Contracts.html"> Contracts</a>
-			<a href="ScheduleRanking.html">Schedule / Ranking</a>
-			<a href="History.html"> History</a>
-			<a href="MilwaukeeHerd.html"> Milwaukee Heard</a>
-			<a href="FanChat.html"> Fan chat</a>
-			<a class="active" href="FanPolling.html"> Fan Polls</a>
-		</div>
-	</header>
-	<body>
-		<a name="top"></a>
-		<p id = "demo"> </p>
-		<script>
-		  var time = new Date();
-		  document.getElementById("demo").innerHTML = time;
-		 </script>
+<head>
+<script>
+function getVote(int) {
+  var xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("poll").innerHTML=this.responseText;
+    }
+  }
+  xmlhttp.open("GET","poll_vote.php?vote="+int,true);
+  xmlhttp.send();
+}
+</script>
+</head>
+<body>
 
-		<h4>This is a Milwaukee Bucks fam page that is created by Max Hollfelder.</h4>
-	</body>
-	<footer>
-		<div class="footer">
-			<a href="#top">Back to top of page</a>
-		</div>
-	</footer>
+<div id="poll">
+<h3>Do you like PHP and AJAX so far?</h3>
+<form>
+Yes: <input type="radio" name="vote" value="0" onclick="getVote(this.value)"><br>
+No: <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
+</form>
+</div>
+
+</body>
 </html>

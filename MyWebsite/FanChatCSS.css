@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+}
+.column {
+  float: left;
+  padding: 10apx;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (min-width: 400px) {
+  .column { grid-template-columns: repeat(1, 1fr); }
+}

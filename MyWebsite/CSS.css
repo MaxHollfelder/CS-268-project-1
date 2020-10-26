@@ -1,12 +1,17 @@
-body {
+html{
+  min-height: 100%;
   background-image: linear-gradient(grey, #034301);
   color: white;
   background-size: 100% 100%;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-.header {
-
+table, th, td {
+  border: 5px solid black;
+}
+table.center{
+  margin-left: auto;
+  margin-right: auto;
 }
 *{box-sizing: border-box}
 .navbar {
@@ -14,17 +19,15 @@ body {
   background-color: #555;
   overflow: auto;
 }
-
 .navbar a {
   float: left;
   padding: 12px;
   color: white;
   text-decoration: none;
   font-size: 17px;
-  width: 25%; /* Four links of equal widths */
+  width: 10%; /* Four links of equal widths */
   text-align: center;
 }
-
 .navbar a:hover {
   background-color: #000;
 }
@@ -32,30 +35,13 @@ body {
 .navbar a.active {
   background-color: #4CAF50;
 }
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .navbar a {
     float: none;
     display: block;
     width: 100%;
     text-align: left;
   }
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-.side {
-  flex: 30%;
-  padding: 20px;
-}
-.main {
-  flex: 70%;
-  padding: 20px;
-}
-.footer {
-  padding: 20px;
-  text-align: center;
 }
 .image{
   width: 90%;
@@ -71,15 +57,18 @@ body {
 }
 .item2 {
   grid-area: menu;
+  text-align: left;
 }
 .item3 {
   grid-area: main;
 }
 .item4 {
   grid-area: right;
+  text-align: left;
 }
 .item5 {
   grid-area: footer;
+  text-align: center;
 }
 
 .grid-container {
@@ -92,7 +81,6 @@ body {
   padding: 10px;
 }
 .grid-container > div {
-  text-align: left;
   padding: 20px 0;
 }
 #container{
