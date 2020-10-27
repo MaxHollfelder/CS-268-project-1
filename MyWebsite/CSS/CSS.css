@@ -7,6 +7,7 @@ html{
   font-family: Arial, Helvetica, sans-serif;
 }
 table, th, td {
+  border-collapse: collapse;
   border: 5px solid black;
 }
 table.center{
@@ -43,7 +44,7 @@ table.center{
     text-align: left;
   }
 }
-.image{
+#imageHP{
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -84,12 +85,24 @@ table.center{
 .grid-container > div {
   padding: 20px 0;
 }
-#image{
+@media (max-width: 900px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'header'
+      'menu'
+      'main'
+      'footer';
+    grid-gap: 10px;
+    padding: 10px;
+  }
+}
+.image{
   float: right;
   width: 200px;
   height: 150px;
 }
-#container{
+.container{
   background-color: black;
   width: 200px;
   height: 300px;
@@ -99,26 +112,26 @@ table.center{
   border-color: black;
   float:left;
 }
-#picture{
+.picture{
   width: 100%;
   height: 40%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-#header {
+.header {
   position: absolute;
   height: auto;
   width: 100%;
   top: 0;
   border: 1px solid green;
 }
-#footer {
+.footer {
   position: absolute;
   width: 100%;
   height: auto;
   bottom: 0;
   text-align: center;
 }
-#divBody{
+.divBody{
   text-align: center;
 }

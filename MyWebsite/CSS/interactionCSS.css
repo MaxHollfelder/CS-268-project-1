@@ -28,7 +28,6 @@
 }
 .bottomB{
   position: absolute;
-  align: center;
   padding:3px;
   bottom:0;
 }
@@ -43,6 +42,9 @@
 }
 @media (max-width: 900px) {
   .poll-container {
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px;
     grid-template-areas:
     "a"
     "b"
